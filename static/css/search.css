@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("/images/bgImg1.jpg");
+    background-image: url("/static/images/bgImg1.jpg");
     height: 100vh;
     position: relative;
 }
@@ -325,5 +325,4 @@ body{
         grid-template-columns: 1fr 1fr 1fr ;
     }
     
-   
 }

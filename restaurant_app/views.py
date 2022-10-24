@@ -5,4 +5,7 @@ def home(request):
     return render(request,"index.html")
 
 def search(request): 
-    return render(request,"search.html")   
+    return render(request,"search.html") 
+
+def cart(request): 
+    return render(request,"cart.html")   

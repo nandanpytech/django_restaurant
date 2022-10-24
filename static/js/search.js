@@ -10,6 +10,10 @@ const close=document.querySelector(".close")
 const item_to_add=document.getElementById("item_to_add")
 const item_ul=document.querySelector(".item_ul")
 const item_ul_main=document.querySelector(".item_ul_main")
+const cart=document.querySelector(".Cart_btn")
+const badge=document.querySelector(".badge")
+const total_amount=document.querySelector(".total_amount")
+const count_in_box=document.querySelector(".count")
 
 search.disabled=true
 input.addEventListener("input",(e)=>{
@@ -89,27 +93,54 @@ category.addEventListener("click",()=>{
     category_items.classList.toggle("showprice")
 })
 
+let initial_price;
+let exact_price;
+var count;
+// popup
+function order(ele){
+    added_items.classList.add("show_add_items")
+    let main_div=ele.parentElement.parentElement
+    const item_=main_div.children[1].innerText;
+    item_name=item_.split(/([0-9]+)/)
+    item_to_add.innerHTML=item_name[0]
+
+    target_one=main_div.children[2].children[1]
+    total_amount.innerHTML=target_one.innerHTML
+
+    run_loop()
+}
+
+function run_loop(){
+    initial_price=Number(total_amount.innerHTML.split(" ")[0].slice(1));
+    exact_price=initial_price;
+    count=1;
+    document.querySelector(".count").innerText=count;
+}
+
 // plus and minus for count '
-var count=0;
+
 function plus(){
     count++;
     document.querySelector(".count").innerText=count;
+
+    exact_price+=initial_price;
+    total_amount.innerHTML=`₹${Number(exact_price)}`
+    
 }
 function minus(){
     if(count>0){
         count--;
     }
- 
+    if(exact_price-initial_price>=0){
+        exact_price-=initial_price
+        total_amount.innerHTML=`₹${Number(exact_price)}`
+    }
+   
+
     document.querySelector(".count").innerText=count;
 }
 
-// popup
-function order(ele){
-    added_items.classList.add("show_add_items")
-    const item_=ele.parentElement.parentElement.children[1].innerText;
-    item_name=item_.split(/([0-9]+)/)
-    item_to_add.innerHTML=item_name[0]
-}
+
 
 // close 
 close.addEventListener("click",()=>{
@@ -162,3 +193,7 @@ function sorted(ele){
         fetch_data(arr3)
     })
 }
+
+//Bouncing cart button
+cart_value=Number(badge.innerText)
+cart.style.animationPlayState=cart_value?'running':' paused'

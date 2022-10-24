@@ -125,6 +125,18 @@ body{
   .add_items{
     display: none;
   }
+  .Cart_btn{
+    background-color: rgb(239, 79, 95) !important;
+    border: 1px solid rgb(239, 79, 95) !important;
+    margin-left: 4rem;
+    animation:bounce 1s infinite;
+  }
+  .total_amount{
+    margin-left: .4rem;
+  }
+  .count{
+    padding: 0 1rem;
+  }
 
 
 @media screen and (max-width:720px) {
@@ -163,7 +175,7 @@ body{
     .dropbtn{
         margin-left: .5rem;
         color: white;
-        padding: .2rem .4rem;
+        padding: 0 .2rem;
         border: 1px solid rgb(239, 79, 95);
         background-color: rgb(239, 79, 95);
         box-shadow: rgb(54 54 54 / 6%) 0px 1px 2px;
@@ -180,7 +192,7 @@ body{
        display: block;
     }
     .drop_1{
-        margin-left: 1rem;
+        margin-left: .3rem;
     }
     .price button{
         height: 100%;
@@ -322,7 +334,12 @@ body{
 }
 @media screen and (min-width:810px){
     .special_cards{
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
-    
+   
+}
+
+@keyframes bounce {
+    form{transform: scale(1.0);}
+    to{transform: scale(0.9);}
 }

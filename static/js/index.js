@@ -20,7 +20,7 @@ function myFunction(){
     }
 }
 
-let url_=fetch("https://restrajesh.herokuapp.com",{
+let url_=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
   method: 'GET',
   headers: {
     "Content-type":"application/json; charset=UTF-8",

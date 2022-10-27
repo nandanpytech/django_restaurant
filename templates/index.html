@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restraurant</title>
-    <link rel="stylesheet" href="{% static 'css/index.css'%}">
     <link rel="stylesheet" href="{%static 'css/search.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
     <script src="https://kit.fontawesome.com/0cc154e2b5.js" crossorigin="anonymous"></script>
 </head>
-<body >
+<body style="background: none">
     <nav class="nav">
             <div class="nav_header">
                 <h2>Food vlogs</h2>
@@ -22,19 +22,19 @@
                         <a href="#">Home</a>
                     </li>
                     <li class="list_item">
-                        <a href="#">Speciality</a>
+                        <a href="#special">Speciality</a>
                     </li>
                     <li class="list_item">
                         <a href="#popular">Popular</a>
                     </li>
                     <li class="list_item">
-                        <a href="#">Gallery</a>
+                        <a href="#gallery">Gallery</a>
                     </li>
                     <li class="list_item">
                         <a href="#">Review</a>
                     </li>
                     <li class="list_item">
-                        <a href="#">Order</a>
+                        <a href="#order">Order</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
     </section>
 
     <!-- special dishes -->
-    <section class="special_dish_container">
+    <section id="special" class="special_dish_container">
         <div class="section_title">
             <h2>Our <span class="special">Special</span> Dishes</h2>
         </div>
@@ -210,7 +210,7 @@
     </section>  
     
     <!-- food Gallery  -->
-    <section class="special_dish_container">
+    <section id="gallery" class="special_dish_container">
         <div class="section_title">
             <h2>Our <span class="special">Food</span> Gallery</h2>
         </div>
@@ -274,7 +274,7 @@
     </section>  
 
     <!-- Order Now  -->
-    <section class="special_dish_container">
+    <section id="order" class="special_dish_container">
         <div class="section_title">
             <h2>Order <span class="special">Here</span> Now</h2>
         </div>
@@ -283,23 +283,23 @@
             <div class="waiter">
                 <img src="/static/images/order-img.jpg" alt="">
             </div>
-            <form action="" class="form Grid">
+            <form action="add_address" method="post" class="form Grid"> {% csrf_token %}
                 <div class="name">
-                    <input type="text" name="" id="" placeholder="Enter your name">
+                    <input type="text" name="name" id="" placeholder="Enter your name" required>
                 </div>
                 <div class="name">
-                    <input type="text" name="" id="" placeholder="Enter your e-mail">
+                    <input type="text" name="email" id="" placeholder="Enter your e-mail" required>
                 </div>
                 <div class="name">
-                    <input type="text" name="" id="" placeholder="Phone-no">
+                    <input type="text" name="phone" id="" placeholder="Phone-no" required>
                 </div>
                 <div class="name">
-                    <input type="text" name="" id="" placeholder="What you order ">
+                    <input type="text" name="pin" id="" placeholder="Pin code" required>
                 </div>
                 <div class="name" id="name">
-                   <textarea name="" id="" cols="30" rows="5"></textarea>
+                   <textarea name="adress" id="" cols="30" rows="5" placeholder="Enter your address" required></textarea>
                 </div>
-                <button class="order_btn contact_btn">Order Now</button>
+                <button type="submit" class="order_btn contact_btn">Add address</button>
             </form>
 
             

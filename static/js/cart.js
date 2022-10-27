@@ -1,15 +1,34 @@
-// const Counteer=document.querySelector(".Count")
-// // plus and minus for count '
-// var Count=0;
-// function Plus(){
-//     Count++;
-//     document.querySelector(".Count").innerText=Count;
-// }
-// function Minus(){
-//     if(Count>0){
-//         Count--;
-//     }
- 
-//     document.querySelector(".Count").innerText=Count;
-// }
-// // console.log(count++)
+// document.querySelector(".Plus_").addEventListener("click",()=>{
+//     location.reload()
+// })
+console.log("hii")
+$(document).ready(function(){
+    $(".Plus_").click(function() {
+         $(this).parent().children().eq(1).html(function(i, val) {
+            let _qty=parseInt($(this).parent().children().eq(1).text())+1
+            $.ajax({
+                url: '/changes',
+                type: 'GET',
+                data: {
+                    changed_qty:parseInt($(this).parent().children().eq(1).text())+1,
+                    changed_name:$(this).parent().parent().prevAll().first().children().eq(1).children().eq(0).text()
+                },
+               
+            });
+            return +val+1;
+          });
+    })
+    $(".Minus_").click(function() {
+         $(this).parent().children().eq(1).html(function(i, val) { 
+            $.ajax({
+                url: '/changes',
+                type: 'GET',
+                data: {
+                    changed_qty:parseInt($(this).parent().children().eq(1).text())-1,
+                    changed_name:$(this).parent().parent().prevAll().first().children().eq(1).children().eq(0).text()
+                },
+            });
+            return val-1;
+         });
+    })
+})

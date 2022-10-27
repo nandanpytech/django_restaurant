@@ -3,9 +3,7 @@
     margin: 2rem 0;
     padding: 1rem 0.5rem;
 }
-.yourorder{
-    margin-bottom: .5rem;
-}
+
 .order_list{
     display: flex;
     justify-content: space-between;
@@ -22,4 +20,41 @@
 }
 .left-side p{
     margin-bottom: 0;
+}
+.split{
+    display: grid;
+    margin: 0 5rem;
+
+}
+.your_order{
+    border: 1px solid black;
+    border-radius: 7px;
+}
+hr{
+    margin: 0 !important;
+    margin-bottom: 1rem !important;
+}
+.grand_total{
+    margin-bottom: 0;
+}
+.pa,.pb{
+    margin: 0;
+}
+.pa{
+    font-weight: 600;
+}
+h6{
+    color: rgb(239, 79, 95) !important;
+    cursor: pointer;
+    align-self: center;
+}
+.counter{
+    border: transparent;
+}
+
+@media screen and (min-width:720px) {
+    .split{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
 }

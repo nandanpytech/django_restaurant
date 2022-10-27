@@ -60,7 +60,7 @@
           </form>
         </div>
           <button class="dropbtn">Rating: 4.0+</button>
-          <div class="price">
+          <div class="price price_down">
           <button class="dropbtn Price-box">Price  <i class="drop_1 fa-sharp fa-solid fa-chevron-down"></i></button>
 
           <div class="dropdown-content">
@@ -89,7 +89,7 @@
           </div>
           <a href="cart">
           <button type="button" class="Cart_btn btn btn-primary">
-          Cart Items <span class="badge badge-light">1</span>
+          Cart Items <span class="badge badge-light">{{total_cart}}</span>
           </button>
         </a>
       </div>
@@ -97,19 +97,22 @@
 
       <!-- Add item to cart  -->
       <div class="add_items">
+        
         <div class="add_item_name"> 
-          <h4 id="item_to_add">Chicken</h4>
+          <h4 id="item_to_add" class="item_to_add">Chicken</h4>
           <i class="fa-solid fa-xmark close"></i> 
         </div><hr style="margin: 0">
         <div class="item_counter">
           <div class="counter">
             <span class="minus" onclick="minus()">-</span>
             <span class="count">1</span>
+            
             <span class="plus" onclick="plus()">+</span>
           </div>
-          <button class="add_item">Add Item <span class="total_amount"> ₹125</span></button>
+        <button  class="add_item">Add Item <span class="total_amount" name="price"> ₹125</span></button>
         </div>
       </div>
+   
       
   <!-- <section class="content"> -->
         <section class="side_nav">
@@ -128,6 +131,7 @@
      
      
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="{%static 'js/search.js' %}"></script>
   <script src="{% static 'js/index.js' %}"></script>
   <script
@@ -135,4 +139,5 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
+ 
 </html>

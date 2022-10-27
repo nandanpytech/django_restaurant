@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 :root{
     --text-color:rgb(248 113 113);
     --text-color-light:rgb(51 65 85);
@@ -37,11 +38,15 @@ ul li a:hover{
     display: flex;
     justify-content: space-between;
     margin: 1rem 1.3rem;
+    box-shadow: none;
+    background-color: transparent ;
 
 }
 .sticky{
     position: sticky;
     top: 0;
+    padding: 0 0.5rem;
+    margin: 0;
     z-index: 500;
     background-color: #fff;
     box-shadow: 0 4px 12px 0 rgb(0 0 0 / 7%);
@@ -184,6 +189,7 @@ ul li a:hover{
 /* Most popular food  */
 .popular_food_container{
     margin-top: 7rem;
+    margin-left: 0;
 }
 
 .popular_item_data article{
@@ -358,6 +364,7 @@ ul li a:hover{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0;
     }
     .home_head{
         font-size: 1.2rem;
@@ -443,7 +450,7 @@ ul li a:hover{
         width: 100%;
     }
     .contact_card{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr) !important;
         margin: 0 5rem;
     }
     .contact_btn{
@@ -489,7 +496,7 @@ ul li a:hover{
         margin: 0 6rem;
     }
     .nav_header{
-        padding-left: 6rem;
+        padding-left: 6rem ;
     }
     .nav_list{
         padding-right: 6rem;

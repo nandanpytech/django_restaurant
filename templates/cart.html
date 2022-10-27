@@ -51,47 +51,104 @@
           </ul>
         </div>
     </nav>
-    <div class="your_order">
-        <h3 class="yourorder">Your Order</h3>
+    <div class="split">
+      <div class="your_order">
+          <h3 class="yourorder">Your Order</h3> <hr>
+          {%for i in cartItems%}
+          <div class="order_list">
+              <div class="left-side">
+                  <i class="fa-solid fa-square"></i>
+                  <div class="name_price">
+                      <p class="order_item_name">{{i.item_name}}</p>
+                      <p class="order_price">₹{{i.price}}</p>
+                  </div>
+              </div>
+              <div class="right-side">
+                  <div class="counter">
+                      <span class="Minus_">-</span>
+                      <span class="Count_">{{i.qty}}</span>
+                      <span class="Plus_" >+</span>
+                  </div>
+              </div>
+          </div>
+          {%endfor%}
+      </div>
+      <div class="your_order">
+        <h3 class="yourorder">Total Bill</h3><hr>
         <div class="order_list">
             <div class="left-side">
-                <i class="fa-solid fa-square"></i>
                 <div class="name_price">
-                    <p class="order_item_name">Chicken Biriyani</p>
-                    <p class="order_price">₹125</p>
+                    <p class="order_item_name">Item Total</p>
                 </div>
             </div>
             <div class="right-side">
-                <div class="counter">
-                    <span class="minus Minus" onclick="minus()">-</span>
-                    <span class="count Count">1</span>
-                    <span class="plus Plus" onclick="plus()">+</span>
-                </div>
+                <p class="total">
+                 <strong> ₹{{total_amount}} </strong></p>
             </div>
         </div>
         <div class="order_list">
             <div class="left-side">
-                <i class="fa-solid fa-square"></i>
                 <div class="name_price">
-                    <p class="order_item_name">Chicken Biriyani</p>
-                    <p class="order_price">₹125</p>
+                    <p class="order_item_name">Taxes & charges</p>
                 </div>
             </div>
             <div class="right-side">
-                <div class="counter">
-                    <span class="minus Minus" onclick="minus()">-</span>
-                    <span class="count Count">1</span>
-                    <span class="plus Plus" onclick="plus()">+</span>
-                </div>
+                <p class="total"><strong>₹25</strong></p>
             </div>
         </div>
+        <div class="order_list">
+            <div class="left-side">
+                <div class="name_price">
+                    <p class="order_item_name">Donate ₹1 to feed India</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="total"></p>
+            </div>
+        </div>
+        <br>
+        <div class="order_list grand_total">
+            <div class="left-side">
+                <div class="name_price">
+                    <p class="order_item_name"><strong>Grand Total:</strong></p>
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="total"><strong class="amoount">₹{{total_amount}}</strong></p>
+            </div>
+        </div>
+      </div>
     </div>
+
+      <div style="height: 120px;width:100%" class="add_items">
+      
+        <div class="add_item_name" style="margin: 0 1rem;"> 
+          <div class="name_price">
+            <p class="order_item_name pa">Your address</p>
+            <p class="order_price pb">{{address.name}}, {{address.pin}}</p>
+        </div>
+          <h6><a href="/add_address"> Change </a></h6>
+        </div><hr style="margin: 0">
+        <div class="item_counter">
+          <div class="counter">
+            <span class="count">Cash On Delivery</span>
+            
+          </div>
+        <button  class="add_item">Confirm Order</button>
+        </div>
+      </div>
 
 
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="{%static 'js/cart.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
 <script src="{%static 'js/search.js' %}"></script>
-<script src="{%static 'js/cart.js' %}"></script>
-
+<script>
+  document.querySelector(".amoount").innerText= `₹${parseInt(document.querySelector(".total").innerText.slice(1))+25}`
+  document.querySelector(".add_item").addEventListener("click",()=>{
+    alert("Your order Submitted!")
+  })
+</script>
 </html>

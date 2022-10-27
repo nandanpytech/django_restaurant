@@ -39,7 +39,7 @@ function fetch_the_data(data){
         <div class="popular_item">
         <div class="popular_item_data">
             <article class="images_middle popular_img">
-                <div id=${id} onclick=order(this) class="popular_item-img"> <img src=${ItemImg} alt=""></div>
+                <div id=${id}  class="popular_item-img"><a href="/search"> <img href="search" src=${ItemImg} alt=""></a></div>
             </article>
             <h2 class="popular_item-text">${firstname} <span>${Rating}<i class="fa-solid fa-star"></i></span></h2>
             <div class="rates">

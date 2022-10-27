@@ -6,6 +6,8 @@ const price=document.querySelector(".price")
 const category=document.querySelector(".category")
 const category_items=document.querySelector(".category_items")
 const added_items=document.querySelector(".add_items")
+const add_item=document.querySelector(".add_item")
+const add_item_name=document.querySelector(".add_item_name i")
 const close=document.querySelector(".close")
 const item_to_add=document.getElementById("item_to_add")
 const item_ul=document.querySelector(".item_ul")
@@ -117,7 +119,7 @@ function run_loop(){
     document.querySelector(".count").innerText=count;
 }
 
-// plus and minus for count '
+// plus and minus for count'
 
 function plus(){
     count++;
@@ -197,3 +199,31 @@ function sorted(ele){
 //Bouncing cart button
 cart_value=Number(badge.innerText)
 cart.style.animationPlayState=cart_value?'running':' paused'
+
+
+
+add_item.addEventListener("click",()=>{
+    add_item_name.click()
+    alert("Added Item to cart!")
+})
+
+
+
+//jquery
+$(document).ready(function(){
+    $(".add_item").click(function(){
+        $.ajax({
+            url:'/add_item',
+            data:{
+                item:$(".count").text(),
+                prices:$(".total_amount").text(),
+                Item_Name:$(".item_to_add").text()
+            },
+            success:function(response){
+                $(".count").text(response.seconds)
+            }
+        })
+      
+        
+    })
+})

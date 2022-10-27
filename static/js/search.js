@@ -42,7 +42,13 @@ search.addEventListener("click",(e)=>{
 
 //To fetch the data...
 function fetch_url(search_name){
-var url=fetch(`https://restrajesh.herokuapp.com/?format=json`)
+var url=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
+  method: 'GET',
+  headers: {
+    "Content-type":"application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+  },
+})
 .then(res=> res.json())
 .then(data=>{
     if(data==null){
@@ -151,7 +157,13 @@ close.addEventListener("click",()=>{
 
 // add category automaticaly from api
 const key="Category"
-var url=fetch(`https://restrajesh.herokuapp.com/?format=json`)
+let url_=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
+  method: 'GET',
+  headers: {
+    "Content-type":"application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+  },
+})
 .then(res=>res.json())
 .then(data=>{
     const unique=[...new Map(data.map(item=>[item[key],item]))];
@@ -183,7 +195,13 @@ function clicked(e){
 function sorted(ele){
     let initial=ele.id;
     let final=Number(initial)+100;
-    const Url=fetch("https://restrajesh.herokuapp.com")
+    let Url=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
+  method: 'GET',
+  headers: {
+    "Content-type":"application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+  },
+})
     .then(res=>res.json())
     .then(data=>{
         let arr3=[];

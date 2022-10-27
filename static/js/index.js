@@ -20,7 +20,14 @@ function myFunction(){
     }
 }
 
-let url_=fetch("https://restrajesh.herokuapp.com/")
+let url_=fetch("https://restrajesh.herokuapp.com",{
+  method: 'GET',
+  headers: {
+    "Content-type":"application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+  },
+  body: JSON.stringify(data),
+})
 .then(res=>res.json())
 .then(data=>{
     const arr=[]

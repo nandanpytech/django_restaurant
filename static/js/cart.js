@@ -1,7 +1,9 @@
-// document.querySelector(".Plus_").addEventListener("click",()=>{
-//     location.reload()
-// })
-console.log("hii")
+var i=document.querySelectorAll(".Plus_")
+i.forEach(element => {
+    element.addEventListener("click",()=>{
+        console.log("hii")
+    })
+});
 $(document).ready(function(){
     $(".Plus_").click(function() {
          $(this).parent().children().eq(1).html(function(i, val) {

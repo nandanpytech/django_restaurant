@@ -264,6 +264,11 @@ body{
 .show_list{
     height: max-content;
 }
+@media screen and (min-height:600px) {
+    .search{
+        height: 4%;
+    }
+}
 
 @media screen and (max-width:720px) {
     .body{
@@ -278,7 +283,6 @@ body{
         position: absolute;
         top: 0.6rem;
         width: 57%;
-        height: 6%;
         z-index: 10;
         justify-content: start;
         margin-left: 3rem;

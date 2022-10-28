@@ -222,7 +222,9 @@ cart.style.animationPlayState=cart_value?'running':' paused'
 
 add_item.addEventListener("click",()=>{
     add_item_name.click()
-    alert("Added Item to cart!")
+    cart_value=Number(badge.innerText)
+    badge.innerText=cart_value+1
+    cart.style.animationPlayState=Number(badge.innerText)?'running':' paused'
 })
 
 
@@ -239,9 +241,11 @@ $(document).ready(function(){
             },
             success:function(response){
                 $(".count").text(response.seconds)
+                
             }
         })
       
         
     })
+
 })

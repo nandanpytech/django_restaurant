@@ -21,7 +21,7 @@ body{
 }
 .nav_header{
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: .2rem;
 }
 .nav_list{
     padding-right: 1rem;
@@ -137,6 +137,7 @@ body{
     height: 100px;
     display: block;
 }
+
 .add_item_name{
     display: flex;
     justify-content: space-between;
@@ -147,11 +148,11 @@ body{
 
 
 /* Cards  */
-.popular_item-text{
+/* .popular_item-text{
     display: flex;
     justify-content: space-between;
     font-size: .8rem;
-}
+} */
 
 
 /* scroll_bar  */
@@ -260,6 +261,9 @@ body{
     cursor: pointer;
     font-size: .8rem;
 }
+.show_list{
+    height: max-content;
+}
 
 @media screen and (max-width:720px) {
     .body{
@@ -272,16 +276,19 @@ body{
     }
     .search{
         position: absolute;
-        top: 0.4rem;
-        left: 8rem;
+        top: 0.6rem;
+        width: 57%;
+        height: 6%;
         z-index: 10;
+        justify-content: start;
+        margin-left: 3rem;
     }
     .search form{
-        width: 75%;
-        height: 85%;
+        width: 100%;
+        height: 100%;
     }
     .search_btn{
-        display: flex;
+        display: flex !important;
         align-items: center;
     }
     .side_nav{
@@ -294,7 +301,6 @@ body{
 
     
     .price{
-       margin-left: 1em;
        display: block;
     }
     .drop_1{
@@ -357,11 +363,6 @@ body{
     .special_cards{
         grid-template-columns: 1fr 1fr;
     }
-    .popular_item-text{
-        font-size: .8rem;
-        display: flex;
-    justify-content: space-between;
-    }
     .order_btn{
         font-size: 0.7rem;
     }
@@ -414,6 +415,17 @@ body{
     }
    
 }
+
+@media screen and (max-width:400px) {
+    .first_line{
+        gap: 1rem;
+        justify-content: start;
+    }
+    .search{
+        margin-left: 6rem;
+    }
+}
+
 
 
 @keyframes bounce {

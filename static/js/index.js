@@ -12,8 +12,6 @@ window.onscroll = function() {myFunction()};
 
 function myFunction(){
     if(window.pageYOffset>sticky){
-        console.log(window.pageYOffset)
-        console.log(sticky)
         nav.classList.add("sticky")
     }else{
         nav.classList.remove("sticky")

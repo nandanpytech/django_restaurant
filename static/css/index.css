@@ -232,23 +232,22 @@ ul li a:hover{
     display: flex;
     justify-content: space-between;
     color: rgb(105, 105, 105);
-    font-size: .7rem;
-    margin: 0 0.2rem
+    font-size: .5rem;
 }
 .working{
     text-align: center;
     row-gap: 1rem;
     margin: 0 1.3rem;
 }
-.works{
+/* .works{
     width: 55%;
     height: 100%;
     justify-self: center;
-}
-.works article{
+} */
+/* .works article{
     display: flex;
     justify-content: center;
-}
+} */
 .working img{
     width: 100%;
     height: 100%;
@@ -306,11 +305,30 @@ ul li a:hover{
 .contact_card{
     margin: 0 5rem;
 }
-
-@media screen and (min-width:320px){
+@media screen and (min-width:340px) and (max-width:700px){
     .special_item-img{
-        width: 22%;
+        width: 43%;
     }
+    .special_item-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .special_cards{
+        margin: 0;
+    }
+    .work_desc{
+        width: 100%;
+    }
+    .working{
+        text-align: center;
+        column-gap: 1rem;
+    }
+    .contact_card{
+        margin: 0 1rem;
+    }
+    
+}
+@media screen and (min-width:320px){
     .special_item{
         width: 80%;
     }
@@ -403,16 +421,13 @@ ul li a:hover{
         font-size: .7rem;
     }
     .popular_item-text{
-    font-size: .8rem;
+    font-size: .6rem;
     display: flex;
     justify-content: space-between;
     }
     .working{
         grid-template-columns: repeat(4,1fr);
         font-size: .6rem;
-    }
-    .work_desc{
-        width: 107%;
     }
 }
 

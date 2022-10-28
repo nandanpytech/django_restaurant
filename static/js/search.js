@@ -17,6 +17,7 @@ const badge=document.querySelector(".badge")
 const total_amount=document.querySelector(".total_amount")
 const count_in_box=document.querySelector(".count")
 
+
 search.disabled=true
 input.addEventListener("input",(e)=>{
     if(input.value.length!=0){
@@ -28,7 +29,6 @@ input.addEventListener("input",(e)=>{
 
 //Runs after hit the "search" box
 search.addEventListener("click",(e)=>{
-    console.log("hoo")
     e.preventDefault()
     var search_name=input.value.slice(0,1).toUpperCase()+ input.value.slice(1)
     input.value="";
@@ -157,7 +157,7 @@ close.addEventListener("click",()=>{
 
 // add category automaticaly from api
 const key="Category"
-let url_=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
+let urll=fetch("https://secret-shore-09422.herokuapp.com/https://restrajesh.herokuapp.com",{
   method: 'GET',
   headers: {
     "Content-type":"application/json; charset=UTF-8",

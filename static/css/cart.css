@@ -58,3 +58,26 @@ h6{
         column-gap: 4rem;
     }
 }
+
+@media screen and (min-width:340px) and (max-width:700px) {
+    .split{
+        margin: 2rem;
+    }
+    .add_item{
+        height: 0%;
+        font-size: .6rem;
+    }
+    .counter{
+        font-size: .8rem;
+    }
+    .add_items{
+        height: 104px !important;
+    }
+    .pa{
+        font-size: .8rem;
+    }
+    .pb{
+        font-size: .6rem;
+    }
+    
+}

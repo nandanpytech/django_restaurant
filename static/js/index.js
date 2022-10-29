@@ -54,3 +54,4 @@ function fetch_the_data(data){
     </div>`
     })
 }
+

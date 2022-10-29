@@ -11,7 +11,15 @@
     --text-color:rgb(248 113 113);
     --text-color-light:rgb(51 65 85);
 }
-
+#content{
+    display: none;
+}
+#loader{
+    height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 .Grid{
     display: grid;
 }

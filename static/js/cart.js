@@ -1,9 +1,3 @@
-var i=document.querySelectorAll(".Plus_")
-i.forEach(element => {
-    element.addEventListener("click",()=>{
-        console.log("hii")
-    })
-});
 $(document).ready(function(){
     $(".Plus_").click(function() {
          $(this).parent().children().eq(1).html(function(i, val) {
@@ -15,6 +9,12 @@ $(document).ready(function(){
                     changed_qty:parseInt($(this).parent().children().eq(1).text())+1,
                     changed_name:$(this).parent().parent().prevAll().first().children().eq(1).children().eq(0).text()
                 },
+               
+            });
+            $.ajax({
+                url: '/search',
+                type: 'GET',
+                
                
             });
             return +val+1;
@@ -34,3 +34,21 @@ $(document).ready(function(){
          });
     })
 })
+
+const a=document.querySelectorAll(".Plus_")
+a.forEach(e => {
+    e.addEventListener("click",()=>{
+       setTimeout(() => {
+            window.location.href="/cart"
+       }, 100);
+    })
+});
+
+const b=document.querySelectorAll(".Minus_")
+b.forEach(e => {
+    e.addEventListener("click",()=>{
+        setTimeout(() => {
+             window.location.href="/cart"
+        }, 100);
+     })
+});

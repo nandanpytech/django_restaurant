@@ -28,7 +28,7 @@ def cart(request):
     total_price=0
     for i in cart_items:
         total_price+=i.price
-    print(total_price)
+
     try:
         address=Customer.objects.get(user=request.user) 
     except:
@@ -36,6 +36,7 @@ def cart(request):
         return HttpResponse("Please, make sure to add address!" + html)   
 
     params={"cartItems":cart_items,"total_amount":total_price,"address":address}
+    print(total_price)
     return render(request,"cart.html",params)   
 
 def Sign_Up(request):

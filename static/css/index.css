@@ -247,15 +247,8 @@ ul li a:hover{
     row-gap: 1rem;
     margin: 0 1.3rem;
 }
-/* .works{
-    width: 55%;
-    height: 100%;
-    justify-self: center;
-} */
-/* .works article{
-    display: flex;
-    justify-content: center;
-} */
+
+
 .working img{
     width: 100%;
     height: 100%;
@@ -502,6 +495,9 @@ ul li a:hover{
     }
     .home_img{
         width: 20rem;
+    }
+    .works{
+        width: 65%;
     }
 }
 

@@ -209,6 +209,7 @@ body{
     background-color: #fff;
     right: 0;
     width: 0;
+    bottom: 0;
     height: 0px;
     overflow: hidden;
     transition: all .2s ease-in;
@@ -411,6 +412,9 @@ body{
 @media screen and (min-width:720px){
     .order_btn{
         font-size: .7rem;
+    }
+    .rates{
+        font-size: .8rem;
     }
 }
 @media screen and (min-width:810px){

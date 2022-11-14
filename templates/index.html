@@ -1,328 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restraurant</title>
-    <link rel="stylesheet" href="{%static 'css/search.css'%}">
-    <link rel="stylesheet" href="{% static 'css/index.css'%}">
-    <script src="https://kit.fontawesome.com/0cc154e2b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/search.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/index.css'%}" />
+    <script
+      src="https://kit.fontawesome.com/0cc154e2b5.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        window.onload=function(){
-            document.getElementById('loader').style.display="none";
-            document.getElementById('content').style.display="block";
-            
-        };
+      window.onload = function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      };
     </script>
-    
-</head>
-<body style="background: none">
-     <!--Preloader-->
-     <div class="preloader" id="loader" >
-		<img src="/static/images/loader.gif">
-	</div>
+  </head>
+  <body style="background: none">
+    <!--Preloader-->
+    <div class="preloader" id="loader">
+      <img src="/static/images/loader.gif" />
+    </div>
 
     <div id="content">
-        <nav class="nav">
-                <div class="nav_header">
-                    <h2>Foodies</h2>
-                    <i class="fa-solid fa-bars Bars" id="bars"></i>
-                </div>
-                <div class="nav_list">
-                    <ul>
-                        <li class="list_item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#special">Speciality</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#popular">Popular</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#gallery">Gallery</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#order">Order</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="signin">SignIn</a>
-                        </li>
-                    </ul>
-                </div>
-        </nav>
+      <nav class="nav">
+        <div class="nav_header">
+          <h2>Foodies</h2>
+          <i class="fa-solid fa-bars Bars" id="bars"></i>
+        </div>
+        <div class="nav_list">
+          <ul>
+            <li class="list_item">
+              <a href="#">Home</a>
+            </li>
+            <li class="list_item">
+              <a href="#special">Speciality</a>
+            </li>
+            <li class="list_item">
+              <a href="#popular">Popular</a>
+            </li>
+            <li class="list_item">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="list_item">
+              <a href="#order">Order</a>
+            </li>
+            <li class="list_item">
+              <a href="signin">SignIn</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-        <main>
-        <section class="home_container Grid"  style="background-image: url(/static/images/home-bg.jpg)">
-            <div class="home_data">
-                <h1 class="home_head">Food Made With Love</h1>
+      <main>
+        <section
+          class="home_container Grid"
+          style="background-image: url(/static/images/home-bg.jpg)"
+        >
+          <div class="home_data">
+            <h1 class="home_head">Food Made With Love</h1>
 
-                <p class="home_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa praesentium natus nesciunt laborum repreh voluptate repellat minus voluptates odit vero.</p>
-             <button onclick="location.href='/search'" class="order_btn">Order Now</button>
-            </div>
-            <img src="/static/images/home-img.png" alt="" class="home_img">
-            
+            <p class="home_description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+              praesentium natus nesciunt laborum repreh voluptate repellat minus
+              voluptates odit vero.
+            </p>
+            <button onclick="location.href='/search'" class="order_btn">
+              Order Now
+            </button>
+          </div>
+          <img src="/static/images/home-img.png" alt="" class="home_img" />
         </section>
 
         <!-- special dishes -->
         <section id="special" class="special_dish_container">
-            <div class="section_title">
-                <h2>Our <span class="special">Special</span> Dishes</h2>
+          <div class="section_title">
+            <h2>Our <span class="special">Special</span> Dishes</h2>
+          </div>
+
+          <div class="special_cards Grid">
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-1.png" alt="" />
+                  </div>
+                </article>
+                <h2 class="special_item-text">Tasty Burger</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                  quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                  magnam culpa, beatae veniam!
+                </p>
+              </div>
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-1.jpg" class="image" alt="" />
+              </div>
+            </div>
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-2.png" alt="" />
+                  </div>
+                </article>
+                <h2 class="special_item-text">Tasty Pizza</h2>
+                <p class="special_item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                    quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                    magnam culpa, beatae veniam!
+                  </p>
+              </div>
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-2.jpg" class="image" alt="" />
+              </div>
             </div>
 
-            <div class="special_cards Grid">
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-3.png" alt="" />
+                  </div>
+                </article>
 
-                    <div class="special_item">
-                        <div class="special_data" id="desc">
-                            <article class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-1.png" alt=""></div>
-                            </article>
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-1.jpg" class="image" alt="">
-                        </div>
-                    </div>
-                    <div class="special_item">
-                        <div class="special_data" id="desc">
-                            <article class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-2.png" alt=""></div>
-                            </article>
-                            <h2 class="special_item-text">Tasty Pizza</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-2.jpg" class="image" alt="">
-                        </div>
-                    
-                    </div>
+                <h2 class="special_item-text">Ice-cream</h2>
+                <p class="special_item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                    quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                    magnam culpa, beatae veniam!
+                  </p>
+              </div>
 
-                    <div class="special_item">
-                        <div class="special_data" id="desc">
-                            <article class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-3.png" alt=""></div>
-                            </article>
-                        
-                            <h2 class="special_item-text">Ice-cream</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        </div>
-
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-3.jpg" class="image" alt="">
-                        </div>
-                    
-                    </div>
-                    <div class="special_item">
-                        <div class="special_data" id="desc">
-                            <article  class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-4.png" alt=""></div>
-                            </article>
-                        
-                            <h2 class="special_item-text">Cold Drinks</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-4.jpg" class="image" alt="">
-                        </div>
-                    
-                    </div>
-
-    
-                    <div class="special_item"> 
-                        <div class="special_data" id="desc">
-                            <article  class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-5.png" alt=""></div>
-                            </article>
-                        
-                            <h2 class="special_item-text">Tasty Sweets</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-5.jpg" class="image" alt="">
-                        </div>
-                    
-                    </div>
-                    <div class="special_item">
-                        <div class="special_data" id="desc">
-                            <article class="images_middle">
-                                <div class="special_item-img"> <img src="/static/images/s-6.png" alt=""></div>
-                            </article>
-                            <h2 class="special_item-text">Breakfast</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="special_data" id="burger">
-                            <img src="/static/images/s-img-6.jpg" class="image" alt="">
-                        </div>
-                        
-                    </div>
-
-                
-                
-                
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-3.jpg" class="image" alt="" />
+              </div>
             </div>
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-4.png" alt="" />
+                  </div>
+                </article>
+
+                <h2 class="special_item-text">Cold Drinks</h2>
+                <p class="special_item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                    quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                    magnam culpa, beatae veniam!
+                  </p>
+              </div>
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-4.jpg" class="image" alt="" />
+              </div>
+            </div>
+
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-5.png" alt="" />
+                  </div>
+                </article>
+
+                <h2 class="special_item-text">Tasty Sweets</h2>
+                <p class="special_item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                    quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                    magnam culpa, beatae veniam!
+                  </p>
+              </div>
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-5.jpg" class="image" alt="" />
+              </div>
+            </div>
+            <div class="special_item">
+              <div class="special_data" id="desc">
+                <article class="images_middle">
+                  <div class="special_item-img">
+                    <img src="/static/images/s-6.png" alt="" />
+                  </div>
+                </article>
+                <h2 class="special_item-text">Breakfast</h2>
+                <p class="special_item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam quam eius soluta quasi? Corrupti laborum nostrum sed
+                    quas omnis dolore iusto aut possimus nesciunt error veritatis,
+                    magnam culpa, beatae veniam!
+                  </p>
+              </div>
+              <div class="special_data" id="burger">
+                <img src="/static/images/s-img-6.jpg" class="image" alt="" />
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Most popular food  -->
 
         <section class="popular_food_container" id="popular">
-            <div class="section_title">
-                <h2>Most <span class="special">Popular</span> Foods</h2>
-            </div>
+          <div class="section_title">
+            <h2>Most <span class="special">Popular</span> Foods</h2>
+          </div>
 
-            <div class="special_cards food_container Grid">
-
-                
-
-
-            </div>
+          <div class="special_cards food_container Grid"></div>
         </section>
-        
+
         <!-- How it works  -->
         <section class="popular_food_container">
-            <div class="section_title">
-                <h2>How It <span class="special">Works </span></h2>
-            </div>
+          <div class="section_title">
+            <h2>How It <span class="special">Works </span></h2>
+          </div>
 
-            <div class="working Grid">
-                <div class="works">
-                    <article>
-                        <div class="works_img"><img src="/static/images/step-1.jpg" alt=""></div>
-                    </article>
-                
-                    <p class="work_desc">Choose Your</p>
-                    <p class="work_desc">Favorite Food</p>
+          <div class="working Grid">
+            <div class="works">
+              <article>
+                <div class="works_img">
+                  <img src="/static/images/step-1.jpg" alt="" />
                 </div>
-                <div class="works">
-                    <article>
-                        <div class="works_img"><img src="/static/images/step-2.jpg" alt=""></div>
-                    </article>
-                
-                    <p class="work_desc">Fast & Safety</p>
-                    <p class="work_desc">Delivery</p>
-                </div>
-                <div class="works">
-                    <article>
-                        <div class="works_img"><img src="/static/images/step-3.jpg" alt=""></div>
-                    </article>
-                
-                    <p class="work_desc">Rewards on</p>
-                    <p class="work_desc">Payment</p>
-                </div>
-                <div class="works">
-                    <article>
-                        <div class="works_img"><img src="/static/images/step-4.jpg" alt=""></div>
-                    </article>
-                
-                    <p class="work_desc">Just Enjoying</p>
-                    <p class="work_desc">Your Meal</p>
-                </div>
-                
+              </article>
+
+              <p class="work_desc">Choose Your</p>
+              <p class="work_desc">Favorite Food</p>
             </div>
-        </section>  
-        
+            <div class="works">
+              <article>
+                <div class="works_img">
+                  <img src="/static/images/step-2.jpg" alt="" />
+                </div>
+              </article>
+
+              <p class="work_desc">Fast & Safety</p>
+              <p class="work_desc">Delivery</p>
+            </div>
+            <div class="works">
+              <article>
+                <div class="works_img">
+                  <img src="/static/images/step-3.jpg" alt="" />
+                </div>
+              </article>
+
+              <p class="work_desc">Rewards on</p>
+              <p class="work_desc">Payment</p>
+            </div>
+            <div class="works">
+              <article>
+                <div class="works_img">
+                  <img src="/static/images/step-4.jpg" alt="" />
+                </div>
+              </article>
+
+              <p class="work_desc">Just Enjoying</p>
+              <p class="work_desc">Your Meal</p>
+            </div>
+          </div>
+        </section>
+
         <!-- food Gallery  -->
         <section id="gallery" class="special_dish_container">
-            <div class="section_title">
-                <h2>Our <span class="special">Food</span> Gallery</h2>
-            </div>
+          <div class="section_title">
+            <h2>Our <span class="special">Food</span> Gallery</h2>
+          </div>
 
-            <div class="special_cards Grid">
-                    <div class="food_item" style="background-image: url(/static/images/g-1.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text"></h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-2.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-3.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-4.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item" style="background-image: url(/static/images/g-5.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-6.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-7.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-8.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
-                    <div class="food_item"  style="background-image: url(/static/images/g-9.jpg)">
-                        <div class="food_data">
-                            <h2 class="special_item-text">Tasty Burger</h2>
-                            <p class="special_item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, rerum assumenda! Rem dolor ipsum quaerat?</p>
-                        </div>
-                    </div>
+          <div class="special_cards Grid">
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-1.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Burger</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
             </div>
-        </section>  
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-2.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Sandwich</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-3.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Rolls</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-4.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Cake</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-5.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Sweet Burfi</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-6.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Spicy Chicken</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-7.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Breakfast</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-8.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Chocolate</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+            <div
+              class="food_item"
+              style="background-image: url(/static/images/g-9.jpg)"
+            >
+              <div class="food_data">
+                <h2 class="special_item-text">Tasty Cookies</h2>
+                <p class="special_item-desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Delectus, rerum assumenda! Rem dolor ipsum quaerat?
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Order Now  -->
         <section id="order" class="special_dish_container">
-            <div class="section_title">
-                <h2>Order <span class="special">Here</span> Now</h2>
+          <div class="section_title">
+            <h2>Order <span class="special">Here</span> Now</h2>
+          </div>
+
+          <div class="special_cards contact_card Grid">
+            <div class="waiter">
+              <img src="/static/images/order-img.jpg" alt="" />
             </div>
+            <form action="" class="form Grid">
+              <div class="name">
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="name">
+                <input
+                  type="text"
+                  name="email"
+                  id=""
+                  placeholder="Enter your e-mail"
+                  required
+                />
+              </div>
+              <div class="name">
+                <input
+                  type="text"
+                  name="phone"
+                  id=""
+                  placeholder="Phone-no"
+                  required
+                />
+              </div>
+              <div class="name">
+                <input
+                  type="text"
+                  name="pin"
+                  id=""
+                  placeholder="Item"
+                  required
+                />
+              </div>
+              <div class="name" id="name">
+                <textarea
+                  name="adress"
+                  id=""
+                  cols="30"
+                  rows="5"
+                  placeholder="Enter your address"
+                  required
+                ></textarea>
+              </div>
+              <button class="order_btn contact_btn">Order</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <section class="footer" style="margin-top: 1.5rem">
+        <p class="connect">Connect Us on Social Media</p>
+        <ul class="social">
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+        </ul>
 
-            <div class="special_cards contact_card Grid">
-                <div class="waiter">
-                    <img src="/static/images/order-img.jpg" alt="">
-                </div>
-                <form action=""  class="form Grid"> 
-                    <div class="name">
-                        <input type="text" name="name" id="" placeholder="Enter your name" required>
-                    </div>
-                    <div class="name">
-                        <input type="text" name="email" id="" placeholder="Enter your e-mail" required>
-                    </div>
-                    <div class="name">
-                        <input type="text" name="phone" id="" placeholder="Phone-no" required>
-                    </div>
-                    <div class="name">
-                        <input type="text" name="pin" id="" placeholder="Item" required>
-                    </div>
-                    <div class="name" id="name">
-                    <textarea name="adress" id="" cols="30" rows="5" placeholder="Enter your address" required></textarea>
-                    </div>
-                    <button  class="order_btn contact_btn">Order</button>
-                </form>
-
-                
-
-            </div>
-        </section>   
-        </main>
+        <p class="copyright">
+          Copyright © 2022 <span id="restaurant">Restaurant</span> All Right
+          Reserved
+        </p>
+      </section>
     </div>
-
-</body>
-<script src="{% static 'js/index.js' %}"></script>
+  </body>
+  <script src="{% static 'js/index.js' %}"></script>
 </html>

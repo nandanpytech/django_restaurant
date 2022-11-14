@@ -137,7 +137,7 @@ ul li a:hover{
     /* box-shadow: rgba(100, 100, 111, .2) 0px 1px 10px 0px; */
     padding: 1rem;
     width: 60%;
-    height: 26vh;
+    height: 38vh;
     justify-self: center;
     position: relative;
     overflow: hidden;
@@ -306,6 +306,42 @@ ul li a:hover{
 .contact_card{
     margin: 0 5rem;
 }
+
+/* footer  */
+.footer{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.social li a{
+    color: white;
+    font-size: 1.5rem;
+}
+.connect{
+    color: white;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+.copyright{
+    border-top: 1px solid gray;
+    color: gray;
+    padding-top: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#restaurant:hover{
+    cursor: pointer;
+    color: var(--text-color);
+}
 @media screen and (min-width:340px) and (max-width:700px){
     .special_item-img{
         width: 43%;
@@ -401,7 +437,7 @@ ul li a:hover{
     }
     .nav_list ul{
         flex-direction: column;
-        padding-left: 1rem;
+        /* padding-left: 1rem; */
     } 
     .list_item{
         margin-top: 1rem;
@@ -417,6 +453,7 @@ ul li a:hover{
     }
     .special_item-text{
         font-size: .9rem;
+        /* padding-top: 2rem; */
     }
     .special_item-desc{
         font-size: .7rem;
@@ -429,6 +466,14 @@ ul li a:hover{
     .working{
         grid-template-columns: repeat(4,1fr);
         font-size: .6rem;
+    }
+    .connect{
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    .copyright{
+        padding-top: .5rem;
+        margin-bottom: 1rem;
     }
 }
 
